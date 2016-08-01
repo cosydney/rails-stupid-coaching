@@ -1,2 +1,16 @@
-<h1>Pages#ask</h1>
-<p>Find me in app/views/pages/ask.html.erb</p>
+<br>
+<br>
+<br>
+<br>
+
+<div class="text-center">
+<h1>Your are speaking to coach now</h1>
+<br>
+<div class="text-center">
+  <form action="/answer" method="post" class="form-inline">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="text" name="search_term" class="form-control">
+    <input type="submit" class="btn btn-primary">
+  </form>
+</div>
+</div>

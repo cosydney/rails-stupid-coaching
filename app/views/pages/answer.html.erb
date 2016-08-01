@@ -1,2 +1,32 @@
-<h1>Pages#answer</h1>
-<p>Find me in app/views/pages/answer.html.erb</p>
+<div class="box">
+<div class="text-center">
+  <br>
+  <div>
+    <div class="bs-callout bs-callout-info">
+    <h4>You</h4>
+      <p><%= @search_term %></p>
+    </div>
+  </div>
+  <div>
+    <div class="bs-callout bs-callout-info">
+      <h4>Stupid coach answer</h4>
+      <p><%= @coach_answer %></p>
+    </div>
+  </div>
+
+  <br>
+
+  <%= link_to "Go to the ask page", ask_path %>
+
+  <h3>Say something else to the coach</h3>
+
+  <div class="text-center">
+    <form action="/answer" method="post" class="form-inline">
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+      <input class="form-control" type="text" name="search_term" placeholder="I am going to work right now !">
+      <input type="submit" class="btn btn-primary">
+    </form>
+  </div>
+
+</div>
